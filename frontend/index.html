@@ -4,115 +4,139 @@
     <meta charset="utf-8">
     <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
-    <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="images/favicons/manifest.json">
     <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="images/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link href="../bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,300,800" rel="stylesheet" type="text/css">
-    <link href="../node_modules/reset-css/reset.css" rel="stylesheet" type="text/css">
-    <link href="../node_modules/slick-carousel/slick/slick.css" rel="stylesheet" type="text/css">
-    <link href="../node_modules/slick-carousel/slick/slick-theme.css" rel="stylesheet" type="text/css">
-    <link href="../node_modules/ng-dialog/css/ngDialog.css" rel="stylesheet" type="text/css">
-    <link href="../node_modules/ng-dialog/css/ngDialog-theme-default.css" rel="stylesheet" type="text/css">
+    <link href="../node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width">
-    <title>K E T</title>
+    <title>K R E T</title>
   </head>
   <body ng-app="myApp" ng-controller="MainController as tab">
-    <header id="nav" class="header">
-      <div class="container"><a class="header__logo"><img src="images/logo.png" class="header__logo_img"><span class="header__logo_text">ket</span></a>
-        <div id="nav-tabs" class="header__nav"><a href="#home" class="header__nav_item header__nav_item--active">home</a><a href="#services" class="header__nav_item">services</a><a href="#portf" class="header__nav_item">portfolio</a><a href="#contacts" class="header__nav_item">contacts</a></div><a class="icon">
-          <div class="hamburger">
-            <div class="menui top-menu"></div>
-            <div class="menui mid-menu"></div>
-            <div class="menui bottom-menu"></div>
-          </div></a>
-      </div>
-    </header>
-    <content class="content">
-      <div id="home" class="banner">
-        <div class="container">
-          <div class="banner__tabs">
-            <div ng-class="{'banner__tabs_item--active':tab.isSet(1)}" ng-click="tab.setTab(1)" class="banner__tabs_item">start tour</div>
-            <div ng-class="{'banner__tabs_item--active':tab.isSet(2)}" ng-click="tab.setTab(2)" class="banner__tabs_item">for all devices</div>
-          </div>
-          <div ng-show="tab.isSet(1)" class="banner__body a">
-            <div class="banner__body_half"><img src="images/phones.png" class="banner__body_img"></div>
-            <div class="banner__body_half"><span class="banner__body_title">fully responsive</span><span class="banner__body_desc">
-                Eum cu tantas legere complectitur, hinc utamur ea eam. Lorem ipsum dolor sit amet, volumus temporibus definitionem id ius, vel ut magna timeam appareat, movet timeam maiorum an ius.
-                Sea libris dictas lucilius et. Ne cibo urbanitas pri, qui ad populo accusamus. Quod congue ea ius, nisl aperiri sit ut.</span><a class="banner__body_button">start tour</a></div>
-          </div>
-          <div ng-show="tab.isSet(2)" class="banner__body a">
-            <div class="banner__body_half banner__body_half--right"><span class="banner__body_title">for all devices</span><span class="banner__body_desc">
-                Eum cu tantas legere complectitur, hinc utamur ea eam. Lorem ipsum dolor sit amet, volumus temporibus definitionem id ius, vel ut magna timeam appareat, movet timeam maiorum an ius.
-                Sea libris dictas lucilius et. Ne cibo urbanitas pri, qui ad populo accusamus. Quod congue ea ius, nisl aperiri sit ut.</span><a class="banner__body_button">start tour</a></div>
-            <div class="banner__body_half"><img src="images/phones.png" class="banner__body_img"></div>
-          </div>
+    <header class="header">
+      <div class="header__top">
+        <select class="language">
+          <option class="language__item">(USA)</option>
+          <option class="language__item">(RU)</option>
+        </select>
+        <div class="sign-in"><span class="sign-in__text sign-in__text--strong">Welcome,</span><span class="sign-in__text sign-in__text--italic"> Please</span>
+          <button class="sign-in__btn">Sign In</button>
         </div>
-      </div>
-      <div id="services" class="timeline">
-        <ul class="flik-timeline flik-timeline-1 timeline__wrap">
-          <li ng-repeat="line in timelineData" data-date="{{line.data}}" class="event timeline__item">
-            <h3 data-title="{{line.title}}" class="timeline__item_title">{{line.subtitle}}</h3>
-            <p data-date="{{line.data}}" class="event-content timeline__item_desc">'{{line.description}}<a class="timeline__item_readmore">read more</a></p>
+        <ul class="basket">
+          <li class="basket__item"><i class="basket__item_icon fa fa fa-search"></i>
+            <input type="search">
           </li>
+          <li class="basket__item"><i class="basket__item_icon fa fa-heart-o"></i>4</li>
+          <li class="basket__item"><i class="basket__item_icon fa fa-shopping-basket"></i>1</li>
+          <li class="basket__item"><i class="basket__item_icon fa fa-dollar"></i>14.99</li>
         </ul>
       </div>
-      <div id="portf" class="portfolio">
-        <div class="container">
-          <div class="portfolio_title">our portfolio</div>
-          <div class="portfolio_subtitle">Eum cu tantas legere complectitur, hinc utamur ea eam. Eum patrioque mnesarchum eu, diam erant convenire et vis. Et essent evertitur sea, vis cu ubique referrentur, sed eu dicant expetendis.</div>
-          <div class="portfolio__tabs">
-            <div ng-click="sort('')" class="portfolio__tabs_item portfolio__tabs_item--active">all</div>
-            <div ng-click="sort('web')" class="portfolio__tabs_item">web</div>
-            <div ng-click="sort('photo')" class="portfolio__tabs_item">photography</div>
-            <div ng-click="sort('graphic')" class="portfolio__tabs_item">graphic design</div>
-          </div>
+      <div class="header__middle">
+        <div class="info-delivery info-delivery--left">
+          <p class="info-delivery__item">Free delivery over £45*</p>
+          <p class="info-delivery__item">Free next day delivery over £65</p>
         </div>
-        <div class="portfolio__wrap">
-          <div class="portfolio__photos center"><a ng-repeat="product in products | filter : filters" products="each" class="portfolio__photo"><img ng-src="{{product.src}}" ng-click="clickToOpen(product)" class="portfolio__photo_image">
-              <div class="portfolio__desc">
-                <div class="portfolio__photo_title">{{product.name}}</div>
-                <div class="portfolio__photo_subtitle">{{product.description}}</div>
-              </div></a></div>
+        <div class="info-caption info-caption--center">
+          <p class="info-caption__item">New look</p>
         </div>
-        <div class="portfolio__counters">
-          <div ng-repeat="counter in counters" class="portfolio__counter-item"><img ng-src="{{counter.icon}}" class="portfolio__counter-item_icon">
-            <div class="portfolio__counter-item_value">{{counter.value}}</div>
-            <div class="portfolio__counter-item_title">{{counter.description}}</div>
+        <div class="info-returns info-returns--right">
+          <p class="info-returns__item">Free returns*</p>
+          <p class="info-returns__item">Free clicl & collect over £19.99</p>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <ul class="menu"><a href="#" class="menu__a">
+            <li class="menu__a_item">New in</li></a><a href="#" class="menu__a">
+            <li class="menu__a_item">Womens</li></a><a href="#" class="menu__a">
+            <li class="menu__a_item">SHOES & ACCESSORIES</li></a><a href="#" class="menu__a">
+            <li class="menu__a_item">MATERNITY</li></a><a href="#" class="menu__a">
+            <li class="menu__a_item">PLUS SIZE</li></a><a href="#" class="menu__a">
+            <li class="menu__a_item">MENS</li></a><a href="#" class="menu__a">
+            <li class="menu__a_item">TEENS</li></a><a href="#" class="menu__a">
+            <li class="menu__a_item">TREND</li></a><a href="#" class="menu__a">
+            <li class="menu__a_item menu__a_item--active">SALE</li></a></ul>
+        <div class="slider"><img src="images/img_slide.png" style="width:100%;" class="slider__img">
+          <div class="slider__content">
+            <p class="slider__content__text">new collection</p>
+            <p class="slider__content__text">Texture Rich & Full Of Life</p>
+            <button class="slider__content__btn">Shop Now</button>
           </div>
         </div>
       </div>
-    </content>
-    <footer id="contacts" class="footer">
-      <div class="footer__container clearfix">
-        <div class="footer_title">contact us</div>
-        <div class="footer_subtitle">Eum cu tantas legere complectitur, hinc utamur ea eam. Eum patrioque mnesarchum eu, diam erant convenire et vis. Et essent evertitur sea, vis cu ubique referrentur, sed eu dicant expetendis.</div>
-        <div class="footer__form">
-          <div class="footer__input-wrap footer__input-wrap--half">
-            <input placeholder="Your name here" class="footer__form_input">
+    </header>
+    <main>
+      <div class="content-top">
+        <div class="ad-shop">
+          <p class="ad-shop__text">NEW  SEASON jacket</p>
+          <p class="ad-shop__text"> The perfect balance of summer fun dressed up in</p>
+          <p class="ad-shop__text">luxurious suedes for any early fall adventure</p>
+          <p class="ad-shop__text"> $14.99</p>
+          <button class="ad-shop__btn">Shop New in</button>
+        </div><img src="images/img_main1_01.png" class="block-img">
+      </div>
+      <div class="content-middle">
+        <div class="sale"><img src="images/img_main2_02.png" class="sale__img">
+          <p class="sale__text"><a href="#" class="sale__text_link">sale man collection</a></p>
+        </div>
+        <div class="shop"><img src="images/img_main5_01.png" class="shop__img">
+          <p class="shop__text"><a href="#" class="shop__text_link">Shop swimwear</a></p>
+        </div>
+        <div class="contacts"><img src="images/f.png" class="contacts__img"><img src="images/g.png" class="contacts__img"><img src="images/t.png" class="contacts__img"><br><img src="images/i.png" class="contacts__img"><img src="images/p.png" class="contacts__img"></div>
+        <div class="trend"><img src="images/img_main4_04.png" class="trend__img">
+          <p class="trend__text"><a href="#" class="trend__text_link">Trend Guides</a></p>
+        </div>
+        <div class="collection"><img src="images/img_main3_02.png" class="collection__img">
+          <div class="collection__text">
+            <p class="collection__text_item">flower collection</p>
+            <p class="collection__text_item">boho luxe print Kimono</p><a href="#" class="collection__text_link">Shop kimonos</a>
           </div>
-          <div class="footer__input-wrap footer__input-wrap--half">
-            <input placeholder="Your email here" class="footer__form_input">
+        </div>
+      </div>
+      <div class="content-bottom">
+        <div class="collection-slider_wrap">
+          <h2 class="collection-slider__title">NEW COLLECTION</h2>
+          <div class="collection-slider__images"><img src="images/left.png" class="collection-slider__images_arrow">
+            <div class="collection-slider__images__wrap"><img src="images/slide-2.5.png" class="collection-slider__images_img"></div>
+            <div class="collection-slider__images__wrap"><img src="images/slide-2.4.png" class="collection-slider__images_img"></div>
+            <div class="collection-slider__images__wrap"><img src="images/slide-2.3.png" class="collection-slider__images_img"></div>
+            <div class="collection-slider__images__wrap"><img src="images/slide-2.2.png" class="collection-slider__images_img"></div>
+            <div class="collection-slider__images__wrap"><img src="images/slide-2.1.png" class="collection-slider__images_img"></div><img src="images/right.png" class="collection-slider__images_arrow">
           </div>
-          <div class="footer__input-wrap">
-            <input placeholder="Your message here" class="footer__form_input">
+        </div>
+        <div class="location">
+          <div class="location-img_wrap"><img src="images/map.png" class="location__img"></div>
+          <div class="location__content">
+            <h2 class="location__content_title">Store locator</h2>
+            <p class="location__content_text">Select a store in your country on the map</p>
+            <button class="location__content_btn">visit Store Locator</button>
           </div>
-        </div><a class="footer__form_submit">send message</a><span class="footer__copyright">&copy; 2014 -<a class="footer__copyright_link">Kat</a>All Right Reserved</span>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="foter__top">
+        <div class="sign-email">
+          <label for="email" class="sign-email__label">Sign Up for email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" class="sign-email__input">
+          <button type="submit" volue="sing up" class="sign-email__submit"><i class="sign-email__submit_icon fa fa-envelope-o"></i>sign up</button>
+        </div>
+        <div class="post">
+          <p class="post__text">Click & Collect.</p>
+          <p class="post__text">Buy online. Collect in store.</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <ul class="footer-menu"><a href="#" class="footer-menu__a">
+            <li class="footer-menu__a_item">CUSTOMER CARE</li></a><a href="#" class="footer-menu__a">
+            <li class="footer-menu__a_item"> DELIVERY & RETURNS</li></a><a href="#" class="footer-menu__a">
+            <li class="footer-menu__a_item"> CARDS & DISCOUNTS</li></a><a href="#" class="footer-menu__a">
+            <li class="footer-menu__a_item"> COMPANY INFO</li></a><a href="#" class="footer-menu__a">
+            <li class="footer-menu__a_item"> © 2014 New Look Retailers Limited.</li></a></ul>
       </div>
     </footer>
-    <script src="../node_modules/angular/angular.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="../node_modules/slick-carousel/slick/slick.js"></script>
-    <script src="scripts/hamburgler/hamburgler.js"></script>
-    <script src="../node_modules/ng-dialog/js/ngDialog.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/1.1.6/waypoints.min.js"></script>
-    <script src="scripts/counterup/jquery.counterup.js"></script>
-    <script src="scripts.js"></script>
   </body>
 </html>

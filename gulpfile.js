@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var jade = require('gulp-jade');
 var stylus = require('gulp-stylus');
 var cleanCSS = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('jade', function () {
@@ -26,7 +25,6 @@ gulp.task('minify-css', function() {
 gulp.task('compress', function() {
     return gulp.src('frontend/scripts/*.js')
         .pipe(sourcemaps.init())
-        .pipe(uglify({mangle: false}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('frontend'));
 });

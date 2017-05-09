@@ -1,15 +1,57 @@
-header.header#nav
-    .container
-        a.header__logo
-            img.header__logo_img(src='images/logo.png')
-            span.header__logo_text ket
-        .header__nav#nav-tabs
-            a.header__nav_item.header__nav_item--active(href="#home") home
-            a.header__nav_item(href="#services") services
-            a.header__nav_item(href="#portf") portfolio
-            a.header__nav_item(href="#contacts") contacts
-        a.icon
-            .hamburger
-                .menui.top-menu
-                .menui.mid-menu
-                .menui.bottom-menu
+header.header
+    .header__top
+        select.language
+            option.language__item (USA)
+            option.language__item (RU)
+        .sign-in
+            span.sign-in__text.sign-in__text--strong Welcome,
+            span.sign-in__text.sign-in__text--italic  Please
+            button.sign-in__btn Sign In
+        ul.basket
+            li.basket__item
+                i.basket__item_icon.fa.fa.fa-search
+                input(type='search')
+            li.basket__item
+                i.basket__item_icon.fa.fa-heart-o
+                | 4
+            li.basket__item
+                i.basket__item_icon.fa.fa-shopping-basket
+                | 1
+            li.basket__item
+                i.basket__item_icon.fa.fa-dollar
+                | 14.99
+    .header__middle
+        .info-delivery.info-delivery--left
+            p.info-delivery__item Free delivery over £45*
+            p.info-delivery__item Free next day delivery over £65
+        .info-caption.info-caption--center
+            p.info-caption__item New look
+        .info-returns.info-returns--right
+            p.info-returns__item Free returns*
+            p.info-returns__item Free clicl & collect over £19.99
+    .header__bottom
+        ul.menu
+            a(href="#").menu__a
+                li.menu__a_item New in
+            a(href="#").menu__a
+                li.menu__a_item Womens
+            a(href="#").menu__a
+                li.menu__a_item SHOES & ACCESSORIES
+            a(href="#").menu__a
+                li.menu__a_item MATERNITY
+            a(href="#").menu__a
+                li.menu__a_item PLUS SIZE
+            a(href="#").menu__a
+                li.menu__a_item MENS
+            a(href="#").menu__a
+                li.menu__a_item TEENS
+            a(href="#").menu__a
+                li.menu__a_item TREND
+            a(href="#").menu__a
+                li.menu__a_item.menu__a_item--active SALE
+        .slider
+            img.slider__img(src="images/img_slide.png" style='width:100%;')
+            .slider__content
+                p.slider__content__text new collection
+                p.slider__content__text Texture Rich & Full Of Life
+                button.slider__content__btn Shop Now

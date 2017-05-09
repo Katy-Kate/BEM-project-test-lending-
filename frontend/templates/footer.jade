@@ -1,25 +1,23 @@
-footer.footer#contacts
-    .footer__container.clearfix
-        .footer_title contact us
-        .footer_subtitle Eum cu tantas legere complectitur, hinc utamur ea eam. Eum patrioque mnesarchum eu, diam erant convenire et vis. Et essent evertitur sea, vis cu ubique referrentur, sed eu dicant expetendis.
-        .footer__form
-            .footer__input-wrap.footer__input-wrap--half
-                input.footer__form_input(placeholder='Your name here')
-            .footer__input-wrap.footer__input-wrap--half
-                input.footer__form_input(placeholder='Your email here')
-            .footer__input-wrap
-                input.footer__form_input(placeholder='Your message here')
-        a.footer__form_submit send message
-        span.footer__copyright &copy; 2014 -
-            a.footer__copyright_link Kat
-            | All Right Reserved
-script(src='../node_modules/angular/angular.min.js')
-script(src='https://code.jquery.com/jquery-1.12.4.min.js', integrity='sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=', crossorigin='anonymous')
-script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
-script(src='../node_modules/slick-carousel/slick/slick.js')
-script(src='scripts/hamburgler/hamburgler.js')
-script(src='../node_modules/ng-dialog/js/ngDialog.js')
-script(src='http://cdnjs.cloudflare.com/ajax/libs/waypoints/1.1.6/waypoints.min.js')
-script(src='scripts/counterup/jquery.counterup.js')
-script(src='scripts.js')
-
+footer.footer
+    .foter__top
+        .sign-email
+            label.sign-email__label(for='email') Sign Up for email
+            input.sign-email__input(type="email" id="email" name="email" placeholder="Enter your email address")
+            button.sign-email__submit(type='submit' volue='sing up')
+                i.sign-email__submit_icon.fa.fa-envelope-o
+                |sign up
+        .post
+            p.post__text Click & Collect.
+            p.post__text Buy online. Collect in store.
+    .footer__bottom
+        ul.footer-menu
+            a(href="#").footer-menu__a
+                li.footer-menu__a_item CUSTOMER CARE
+            a(href="#").footer-menu__a
+                li.footer-menu__a_item  DELIVERY & RETURNS
+            a(href="#").footer-menu__a
+                li.footer-menu__a_item  CARDS & DISCOUNTS
+            a(href="#").footer-menu__a
+                li.footer-menu__a_item  COMPANY INFO
+            a(href="#").footer-menu__a
+                li.footer-menu__a_item  © 2014 New Look Retailers Limited.
